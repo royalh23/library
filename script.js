@@ -11,3 +11,7 @@ Book.prototype.info = function() {
   return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "finished" : 
                                                                "not read yet"}`;
 };
+
+function addBookToLibrary() {
+  
+}
