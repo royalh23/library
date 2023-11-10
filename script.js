@@ -6,11 +6,11 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-
+  return;
 }
 
 function doSth() {
-
+  return;
 }
 
 const myLibrary = [];
