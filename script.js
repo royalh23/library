@@ -11,4 +11,10 @@ function addBookToLibrary() {
 
 }
 
-const mainContainer = document.querySelector(".main-container");
+function doSth() {
+  
+}
+
+const newBookBtn = document.querySelector(".add-book");
+
+newBookBtn.addEventListener("click", doSth);
