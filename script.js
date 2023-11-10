@@ -10,3 +10,5 @@ function Book(title, author, pages, read) {
 function addBookToLibrary() {
 
 }
+
+const mainContainer = document.querySelector(".main-container");
