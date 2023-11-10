@@ -15,11 +15,18 @@ body {
   align-items: center;
 }
 
-h1, .container {
+h1, .main-container {
   width: 90%;
 }
 
 h1 {
   text-align: center;
   margin: 0;
+}
+
+.empty-warning {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
