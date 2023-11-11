@@ -11,24 +11,30 @@
     <dialog id="form-dialog">
       <form>
         <h1>Book Details</h1>
-        <div>
+        <div class="main-controls">
           <label for="book-title">Title: </label>
           <input type="text" id="book-title" name="book-title">
         </div>
-        <div>
+        <div class="main-controls">
           <label for="book-author">Author: </label>
           <input type="text" id="book-author" name="book-author">
         </div>
-        <div>
+        <div class="main-controls">
           <label for="book-pages">Number of pages: </label>
           <input type="number" id="book-pages" name="book-pages">
         </div>
         <fieldset>
           <legend>Have you read the book?</legend>
-          <input type="radio" id="yes" name="read-status"><label for="yes">Yes</label>
-          <input type="radio" id="no" name="read-status"><label for="no">No</label>
+          <div>
+            <div>
+              <input type="radio" id="yes" name="read-status"><label for="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="read-status"><label for="no">No</label>
+            </div>
+          </div>
         </fieldset>
-        <div>
+        <div class="form-buttons">
           <button>Cancel</button>
           <button>Submit</button>
         </div>

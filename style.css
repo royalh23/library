@@ -31,6 +31,76 @@ h1 {
 }
 
 #form-dialog {
-  width: max(250px, 30%);
+  width: max(300px, 30%);
   min-height: 550px;
+  border-radius: 15px;
+}
+
+::backdrop {
+  backdrop-filter: blur(4px);
+}
+
+#form-dialog > form {
+  display: grid;
+  gap: 60px;
+}
+
+#form-dialog h1 {
+  justify-self: center;
+}
+
+.main-controls {
+  display: grid;
+  grid-template-columns: minmax(50px, 1fr) minmax(100px, 3fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.main-controls > input {
+  height: 30px;
+  padding: 15px 5px;
+  border-radius: 5px;
+}
+
+.main-controls, 
+fieldset,
+.main-controls > input {
+  font-size: 1.3rem;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+fieldset > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-buttons button {
+  font-size: 1.2rem;
+  width: 100px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(4px);
 }
