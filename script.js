@@ -9,12 +9,13 @@ function addBookToLibrary() {
   return;
 }
 
-function doSth() {
-  return;
+function showDialog() {
+  formDialog.showModal();
 }
 
 const myLibrary = [];
 
-const newBookBtn = document.querySelector(".add-book");
+const formDialog = document.querySelector("#form-dialog");
+const addNewBookBtn = document.querySelector(".add-book");
 
-newBookBtn.addEventListener("click", doSth);
+addNewBookBtn.addEventListener("click", showDialog);
