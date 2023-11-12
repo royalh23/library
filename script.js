@@ -8,8 +8,8 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(formData) {
   const book = new Book(formData.get("book-title"),
                         formData.get("book-author"),
-                        formData.get("book-pages"),
-                        formData.get("read-status"));
+                        +formData.get("book-pages"),
+                        formData.get("read-status") === "true");
   myLibrary.push(book);
 }
 
@@ -21,6 +21,7 @@ function submitFormData(event) {
   event.preventDefault();
   formData = new FormData(form);
   addBookToLibrary(formData);
+  form.reset();
   formDialog.close();
 }
 
