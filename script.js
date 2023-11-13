@@ -13,6 +13,46 @@ function addBookToLibrary(formData) {
   myLibrary.push(book);
 }
 
+function displayBook(book) {
+  const bookCard = document.createElement("div");
+  const titleContainer = document.createElement("div");
+  const authorContainer = document.createElement("div");
+  const pagesContainer = document.createElement("div");
+  const buttons = document.createElement("div");
+
+  bookCard.classList.add("book-card");
+  titleContainer.classList.add("title-container");
+  authorContainer.classList.add("author-container");
+  pagesContainer.classList.add("pages-contianer");
+  buttons.classList.add("buttons");
+  
+  const title = document.createElement("div");
+  const titleValue = document.createElement("div");
+  const author = document.createElement("div");
+  const authorValue = document.createElement("div");
+  const pages = document.createElement("div");
+  const pagesValue = document.createElement("div");
+  const removeBtn = document.createElement("button");
+  const readBtn = document.createElement("button");
+
+  title.textContent = "Title: ";
+  titleValue.textContent = `${book.title}`;
+  author.textContent = "Author: ";
+  authorValue.textContent = `${book.author}`;
+  pages.textContent = "Pages: ";
+  pagesValue.textContent = `${book.pages}`;
+  removeBtn.textContent = "Remove";
+  readBtn.textContent = `${book.read ? "Read" : "Not read"}`;
+
+  titleContainer.append(title, titleValue);
+  authorContainer.append(author, authorValue);
+  pagesContainer.append(pages, pagesValue);
+  buttons.append(removeBtn, readBtn);
+
+  bookCard.append(titleContainer, authorContainer, pagesContainer, buttons);
+  booksContainer.append(bookCard);
+}
+
 function showDialog() {
   formDialog.showModal();
 }
@@ -21,6 +61,7 @@ function submitFormData(event) {
   event.preventDefault();
   formData = new FormData(form);
   addBookToLibrary(formData);
+  myLibrary.forEach(book => displayBook(book));
   form.reset();
   formDialog.close();
 }
@@ -32,6 +73,7 @@ const formDialog = document.querySelector("#form-dialog");
 const addNewBookBtn = document.querySelector(".add-book");
 const submitBtn = document.getElementById("submitBtn");
 const form = document.querySelector("#form-dialog > form");
+const booksContainer = document.querySelector(".books-container");
 
 addNewBookBtn.addEventListener("click", showDialog);
 submitBtn.addEventListener("click", submitFormData);
