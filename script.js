@@ -66,7 +66,8 @@ function submitFormData(event) {
   event.preventDefault();
   formData = new FormData(form);
   addBookToLibrary(formData);
-  displayBook(myLibrary[myLibrary.length-1]);
+  booksContainer.textContent = "";
+  myLibrary.forEach(book => displayBook(book));
   form.reset();
   formDialog.close();
 }
