@@ -57,6 +57,16 @@ function displayBook(book) {
 
   bookCard.append(titleContainer, authorContainer, pagesContainer, buttons);
   booksContainer.append(bookCard);
+
+  const removeBtns = document.querySelectorAll(".remove-btn");
+  removeBtns.forEach(removeBtn => removeBtn.addEventListener("click",
+                                                              removeBook));
+}
+
+function removeBook(e) {
+  myLibrary.splice(e.target.dataset.index, 1);
+  booksContainer.textContent = "";
+  myLibrary.forEach(book => displayBook(book));
 }
 
 function showDialog() {
