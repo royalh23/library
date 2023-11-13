@@ -150,3 +150,8 @@ button:active {
   background-color: rgb(232, 35, 35);
   color: white;
 }
+
+.read {
+  background-color: rgb(61, 205, 61);
+  color: white;
+}

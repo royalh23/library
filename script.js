@@ -20,12 +20,6 @@ function displayBook(book) {
   const pagesContainer = document.createElement("div");
   const buttons = document.createElement("div");
 
-  bookCard.classList.add("book-card");
-  titleContainer.classList.add("title-container");
-  authorContainer.classList.add("author-container");
-  pagesContainer.classList.add("pages-container");
-  buttons.classList.add("book-buttons");
-  
   const title = document.createElement("div");
   const titleValue = document.createElement("div");
   const author = document.createElement("div");
@@ -35,13 +29,6 @@ function displayBook(book) {
   const removeBtn = document.createElement("button");
   const readBtn = document.createElement("button");
 
-  titleValue.classList.add("center-card-value");
-  authorValue.classList.add("center-card-value");
-  pagesValue.classList.add("center-card-value");
-  readBtn.classList.add("read-btn");
-  removeBtn.classList.add("remove-btn");
-  removeBtn.dataset.index = `${myLibrary.indexOf(book)}`;
-
   title.textContent = "Title: ";
   titleValue.textContent = `${book.title}`;
   author.textContent = "Author: ";
@@ -50,6 +37,20 @@ function displayBook(book) {
   pagesValue.textContent = `${book.pages}`;
   removeBtn.textContent = "Remove";
   readBtn.textContent = `${book.read ? "Read" : "Not read"}`;
+
+  bookCard.classList.add("book-card");
+  titleContainer.classList.add("title-container");
+  authorContainer.classList.add("author-container");
+  pagesContainer.classList.add("pages-container");
+  buttons.classList.add("book-buttons");
+
+  titleValue.classList.add("center-card-value");
+  authorValue.classList.add("center-card-value");
+  pagesValue.classList.add("center-card-value");
+  removeBtn.classList.add("remove-btn");
+  removeBtn.dataset.index = `${myLibrary.indexOf(book)}`;
+  readBtn.classList.add("status-btn");
+  if (readBtn.textContent === "Read") readBtn.classList.add("read");
 
   titleContainer.append(title, titleValue);
   authorContainer.append(author, authorValue);
@@ -62,12 +63,21 @@ function displayBook(book) {
   const removeBtns = document.querySelectorAll(".remove-btn");
   removeBtns.forEach(removeBtn => removeBtn.addEventListener("click",
                                                               removeBook));
+
+  const readBtns = document.querySelectorAll(".status-btn");
+  readBtns.forEach(readBtn => readBtn.addEventListener("click", changeStatus));
 }
 
 function removeBook(e) {
   myLibrary.splice(e.target.dataset.index, 1);
   booksContainer.textContent = "";
   myLibrary.forEach(book => displayBook(book));
+}
+
+function changeStatus(e) {
+  e.target.classList.toggle("read");
+  if (e.target.textContent === "Read") e.target.textContent = "Not read";
+  else e.target.textContent = "Read";
 }
 
 function showDialog() {
