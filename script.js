@@ -38,6 +38,7 @@ function displayBook(book) {
   titleValue.classList.add("center-card-value");
   authorValue.classList.add("center-card-value");
   pagesValue.classList.add("center-card-value");
+  readBtn.classList.add("read-btn");
   removeBtn.classList.add("remove-btn");
   removeBtn.dataset.index = `${myLibrary.indexOf(book)}`;
 
