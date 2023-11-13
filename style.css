@@ -112,6 +112,8 @@ button:active {
   grid-auto-rows: 240px;
   gap: 30px;
   width: 90%;
+  padding: 30px;
+  border: 1px solid black;
 }
 
 .book-card {
