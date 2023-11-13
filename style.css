@@ -144,6 +144,6 @@ button:active {
   gap: 10px;
 }
 
-.main-container button {
+.main-container > button {
   width: 200px;
 }
