@@ -20,7 +20,6 @@ function displayBook(book) {
   const pagesContainer = document.createElement("div");
   const buttons = document.createElement("div");
 
-  bookCard.dataset.index = `${myLibrary.indexOf(book)}`;
   bookCard.classList.add("book-card");
   titleContainer.classList.add("title-container");
   authorContainer.classList.add("author-container");
@@ -40,6 +39,7 @@ function displayBook(book) {
   authorValue.classList.add("center-card-value");
   pagesValue.classList.add("center-card-value");
   removeBtn.classList.add("remove-btn");
+  removeBtn.dataset.index = `${myLibrary.indexOf(book)}`;
 
   title.textContent = "Title: ";
   titleValue.textContent = `${book.title}`;
