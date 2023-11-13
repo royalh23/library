@@ -23,8 +23,8 @@ function displayBook(book) {
   bookCard.classList.add("book-card");
   titleContainer.classList.add("title-container");
   authorContainer.classList.add("author-container");
-  pagesContainer.classList.add("pages-contianer");
-  buttons.classList.add("buttons");
+  pagesContainer.classList.add("pages-container");
+  buttons.classList.add("book-buttons");
   
   const title = document.createElement("div");
   const titleValue = document.createElement("div");
@@ -34,6 +34,10 @@ function displayBook(book) {
   const pagesValue = document.createElement("div");
   const removeBtn = document.createElement("button");
   const readBtn = document.createElement("button");
+
+  titleValue.classList.add("title-value");
+  authorValue.classList.add("author-value");
+  pagesValue.classList.add("pages-value");
 
   title.textContent = "Title: ";
   titleValue.textContent = `${book.title}`;
@@ -61,7 +65,7 @@ function submitFormData(event) {
   event.preventDefault();
   formData = new FormData(form);
   addBookToLibrary(formData);
-  myLibrary.forEach(book => displayBook(book));
+  displayBook(myLibrary[myLibrary.length-1]);
   form.reset();
   formDialog.close();
 }

@@ -89,7 +89,8 @@ fieldset > div {
   justify-content: space-evenly;
 }
 
-.form-buttons button {
+.form-buttons button,
+.book-buttons button {
   font-size: 1.2rem;
   width: 100px;
   border: 0;
@@ -103,4 +104,42 @@ button {
 
 button:active {
   transform: translateY(4px);
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 240px;
+  width: 90%;
+}
+
+.book-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-container,
+.author-container,
+.pages-container {
+  display: grid;
+  grid-template-columns: minmax(50px, 1fr) minmax(50px, 2fr);
+  align-items: center;
+  height: 50px;
+}
+
+.title-value,
+.author-value,
+.pages-value {
+  justify-self: center;
+}
+
+.book-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
