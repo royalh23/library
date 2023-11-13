@@ -35,9 +35,9 @@ function displayBook(book) {
   const removeBtn = document.createElement("button");
   const readBtn = document.createElement("button");
 
-  titleValue.classList.add("title-value");
-  authorValue.classList.add("author-value");
-  pagesValue.classList.add("pages-value");
+  titleValue.classList.add("center-card-value");
+  authorValue.classList.add("center-card-value");
+  pagesValue.classList.add("center-card-value");
 
   title.textContent = "Title: ";
   titleValue.textContent = `${book.title}`;

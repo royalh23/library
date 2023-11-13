@@ -132,9 +132,7 @@ button:active {
   height: 50px;
 }
 
-.title-value,
-.author-value,
-.pages-value {
+.center-card-value {
   justify-self: center;
 }
 
