@@ -38,6 +38,7 @@ function displayBook(book) {
   titleValue.classList.add("center-card-value");
   authorValue.classList.add("center-card-value");
   pagesValue.classList.add("center-card-value");
+  removeBtn.classList.add("remove-btn");
 
   title.textContent = "Title: ";
   titleValue.textContent = `${book.title}`;

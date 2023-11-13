@@ -145,3 +145,8 @@ button:active {
 .main-container > button {
   width: 200px;
 }
+
+.remove-btn {
+  background-color: rgb(232, 35, 35);
+  color: white;
+}
