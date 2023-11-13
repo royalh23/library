@@ -86,7 +86,8 @@ fieldset > div {
 }
 
 .form-buttons button,
-.book-buttons button {
+.book-buttons button,
+.main-container button {
   font-size: 1.2rem;
   width: 100px;
   border: 0;
@@ -140,4 +141,8 @@ button:active {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+}
+
+.main-container button {
+  width: 200px;
 }
