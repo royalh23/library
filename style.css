@@ -58,7 +58,18 @@ h1 {
 .main-controls > input {
   height: 30px;
   padding: 15px 5px;
+  border: 1.5px solid #cfd1d4;
   border-radius: 5px;
+}
+
+.main-controls > input:hover {
+  border: 1px solid rgb(119, 176, 238);
+}
+
+.main-controls > input:focus {
+  outline: none;
+  border: 1px solid #2554d9;
+  box-shadow: 3px 3px 5px rgb(220, 220, 220);
 }
 
 .main-controls, 
