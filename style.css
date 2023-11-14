@@ -194,5 +194,5 @@ button:active {
 }
 
 button:focus {
-  border: 0;
+  outline: 0;
 }
