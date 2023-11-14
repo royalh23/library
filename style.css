@@ -33,6 +33,7 @@ h1 {
   width: max(300px, 30%);
   min-height: 550px;
   border-radius: 15px;
+  border: 0;
 }
 
 ::backdrop {
@@ -126,7 +127,6 @@ button:active {
 }
 
 .book-card {
-  border: 2px solid black;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 1.2rem;
