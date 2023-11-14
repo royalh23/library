@@ -34,6 +34,7 @@ h1 {
   width: max(300px, 30%);
   min-height: 550px;
   border-radius: 15px;
+  padding: 32px;
   border: 0;
 }
 
