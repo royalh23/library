@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #e2e8f0;
+  font-family: 'Space Grotesk', sans-serif;;
 }
 
 h1 {
@@ -54,6 +55,10 @@ h1 {
   grid-template-columns: minmax(50px, 1fr) minmax(100px, 3fr);
   align-items: center;
   gap: 10px;
+}
+
+input {
+  font-family: inherit;
 }
 
 .main-controls > input {
@@ -112,6 +117,7 @@ fieldset > div {
 
 button {
   cursor: pointer;
+  font-family: inherit;
 }
 
 button:active {
