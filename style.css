@@ -155,3 +155,31 @@ button:active {
   background-color: rgb(61, 205, 61);
   color: white;
 }
+
+.add-book,
+.submit-btn {
+  background-color: rgb(0, 179, 255);
+  color: white;
+}
+
+.add-book:hover,
+.submit-btn:hover {
+  background-color: rgb(0, 158, 225);
+}
+
+.cancel-btn:hover,
+.status-btn:hover {
+  background-color: #d5d5d5;
+}
+
+.read:hover {
+  background-color: rgb(46, 155, 46);
+}
+
+.remove-btn:hover {
+  background-color: rgb(191, 29, 29);
+}
+
+button:focus {
+  border: 0;
+}

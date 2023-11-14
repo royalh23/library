@@ -99,7 +99,7 @@ const myLibrary = [];
 let formData;
 const formDialog = document.querySelector("#form-dialog");
 const addNewBookBtn = document.querySelector(".add-book");
-const submitBtn = document.getElementById("submitBtn");
+const submitBtn = document.querySelector(".submit-btn");
 const form = document.querySelector("#form-dialog > form");
 const booksContainer = document.querySelector(".books-container");
 
