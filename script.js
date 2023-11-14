@@ -39,9 +39,9 @@ function displayBook(book) {
   readBtn.textContent = `${book.read ? "Read" : "Not read"}`;
 
   bookCard.classList.add("book-card");
-  titleContainer.classList.add("title-container");
-  authorContainer.classList.add("author-container");
-  pagesContainer.classList.add("pages-container");
+  titleContainer.classList.add("book-component");
+  authorContainer.classList.add("book-component");
+  pagesContainer.classList.add("book-component");
   buttons.classList.add("book-buttons");
 
   titleValue.classList.add("center-card-value");

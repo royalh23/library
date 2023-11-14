@@ -142,9 +142,7 @@ button:active {
   background-color: white;
 }
 
-.title-container,
-.author-container,
-.pages-container {
+.book-component {
   display: grid;
   grid-template-columns: minmax(50px, 1fr) minmax(50px, 2fr);
   align-items: center;
