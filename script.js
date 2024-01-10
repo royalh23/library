@@ -86,14 +86,21 @@ function showDialog() {
   formDialog.showModal();
 }
 
-function submitFormData(event) {
-  event.preventDefault();
-  formData = new FormData(form);
-  addBookToLibrary(formData);
-  booksContainer.textContent = "";
-  myLibrary.forEach(book => displayBook(book));
+function closeDialog() {
   form.reset();
   formDialog.close();
+}
+
+function submitFormData(event) {
+  if (form.checkValidity()) {
+    event.preventDefault();
+    formData = new FormData(form);
+    addBookToLibrary(formData);
+    booksContainer.textContent = "";
+    myLibrary.forEach(book => displayBook(book));
+    form.reset();
+    formDialog.close();
+  }
 }
 
 const myLibrary = [];
@@ -102,8 +109,10 @@ let formData;
 const formDialog = document.querySelector("#form-dialog");
 const addNewBookBtn = document.querySelector(".add-book");
 const submitBtn = document.querySelector(".submit-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
 const form = document.querySelector("#form-dialog > form");
 const booksContainer = document.querySelector(".books-container");
 
 addNewBookBtn.addEventListener("click", showDialog);
 submitBtn.addEventListener("click", submitFormData);
+cancelBtn.addEventListener("click", closeDialog);
